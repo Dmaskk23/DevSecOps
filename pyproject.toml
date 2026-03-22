@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "currency_api_lab"
+version = "1.0.0"
+description = "CI/CD Pipeline Lab with Currency API"
+requires-python = ">=3.9"
+dependencies = [
+    "flask==3.0.0",
+    "gunicorn==21.2.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==7.4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
